@@ -13,7 +13,7 @@ String url = "https://www.utest.com/";
 //Launch url
 driver.get(url);
 Thread.sleep(5000);
-//sign in
+//Verify that you are on the right page.
 String fail = "Test is failed!";
 String currenturl = driver.getCurrentUrl();
 System.out.println(currenturl);
@@ -29,21 +29,25 @@ if (currenttitle.equals(currenttitle)){
 } else {
 	System.out.println(fail);
 }
+//sign in.
 driver.findElement(By.linkText("Sign in")).click();
 Thread.sleep(5000);
 
 driver.findElement(By.xpath("/html/body/div/div/form/div[1]/input" )).clear();
-driver.findElement(By.xpath("/html/body/div/div/form/div[1]/input" )).sendKeys("josephzhirkov@gmail.com");
+driver.findElement(By.xpath("/html/body/div/div/form/div[1]/input" )).sendKeys("email");
 driver.findElement(By.xpath("/html/body/div/div/form/div[2]/input")).clear();
-driver.findElement(By.xpath("/html/body/div/div/form/div[2]/input")).sendKeys("@Goats4Sale");
+driver.findElement(By.xpath("/html/body/div/div/form/div[2]/input")).sendKeys("Password");
 driver.findElement(By.xpath("/html/body/div/div/form/button")).click();
 Thread.sleep(5000);
 //locate the follow button
+/*I am having issues with locating the follow button. It seems like it is created as a check box.
+please help! */
 
 
 
 //click follow button 
-	}}
+	}
+}
 	
 
 
