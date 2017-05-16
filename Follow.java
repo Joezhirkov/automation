@@ -34,8 +34,10 @@ driver.findElement(By.linkText("Sign in")).click();
 Thread.sleep(5000);
 
 driver.findElement(By.xpath("/html/body/div/div/form/div[1]/input" )).clear();
+		                                          //Make sure you add and existing email
 driver.findElement(By.xpath("/html/body/div/div/form/div[1]/input" )).sendKeys("email");
 driver.findElement(By.xpath("/html/body/div/div/form/div[2]/input")).clear();
+		                                         //Make sure you add a password that corresponds with ^^ email.
 driver.findElement(By.xpath("/html/body/div/div/form/div[2]/input")).sendKeys("Password");
 driver.findElement(By.xpath("/html/body/div/div/form/button")).click();
 Thread.sleep(5000);
